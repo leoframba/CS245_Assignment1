@@ -90,13 +90,13 @@ public class Assignment1 {
             System.out.println(arrLength + " - " + endTime + " - " + ass.checkSort(toSort));
         }
 
-        RegionMerge mms = new RegionMerge();
-        System.out.println("MMMerge Sort");
+        RegionMerge rm = new RegionMerge();
+        System.out.println("RegionMerge Sort");
         for (int i = 0; i < testLists.size(); i++) {
             int arrLength = testLists.get(i).length;
             double[] toSort = Arrays.copyOf(testLists.get(i), arrLength);
             double startTime = System.currentTimeMillis();
-            mms.sort(toSort);
+            rm.sort(toSort);
             double endTime = System.currentTimeMillis() - startTime;
             timeLists.get(i).add(endTime);
             System.out.println(arrLength + " - " + endTime + " - " + ass.checkSort(toSort));
